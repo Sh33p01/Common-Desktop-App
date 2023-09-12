@@ -111,5 +111,9 @@
     <Folder Include="ModelView\" />
     <Folder Include="Model\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Lonx-logo-black.png" />
+    <Resource Include="Images\Lonx-logo-white.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
