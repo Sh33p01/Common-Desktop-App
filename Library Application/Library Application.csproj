@@ -115,5 +115,8 @@
     <Resource Include="Images\Lonx-logo-black.png" />
     <Resource Include="Images\Lonx-logo-white.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ShowHide.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
