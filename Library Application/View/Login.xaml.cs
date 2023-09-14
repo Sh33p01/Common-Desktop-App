@@ -24,20 +24,27 @@ namespace Library_Application.View
             InitializeComponent();
         }
 
+
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
-                DragMove();
+                DragMove();                                 //This function allows the user to drag the window where she/he desires it
         }
 
         private void BtnMinimize_Click(object sender, RoutedEventArgs e)
         {
-            WindowState = WindowState.Minimized;
+            WindowState = WindowState.Minimized; //This will Minimize the window when clicked
         }
 
         private void BtnClose_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            Application.Current.Shutdown(); //This will close the program when clicked
         }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }
