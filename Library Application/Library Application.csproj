@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\ViewModelCommand.cs" />
     <Compile Include="View\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -108,7 +110,6 @@
     <Resource Include="Images\user-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ModelView\" />
     <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
