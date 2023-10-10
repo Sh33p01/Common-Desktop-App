@@ -25,7 +25,7 @@ namespace Library_Application.ViewModels
             }
             set
             {
-                Username = value;
+                _username = value;
                 OnPropertyChanged(nameof(Username));
             }
         }
@@ -77,21 +77,26 @@ namespace Library_Application.ViewModels
         public LoginViewModel()
         {
             LoginCommand = new ViewModelCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
-            RecoverPasswordCommand = new ViewModelCommand(ExecuteRecoverPassCommand);
+            RecoverPasswordCommand = new ViewModelCommand(p => ExecuteRecoverPassCommand("", ""));
         }
 
 
         private bool CanExecuteLoginCommand(object obj)
         {
-            throw new NotImplementedException();
+            bool validDate;
+            if (string.IsNullOrWhiteSpace(Username) || Username.Length < 3 || password == null || password.Length < 3)
+                validDate = false;    //if the username or password field is null, has blank spaces or charater length is less than 3
+            else                     // we throw an error message saying the data entered is not valid and the command should not be executed
+                validDate = true;
+            return validDate;     
         }
 
         private void ExecuteLoginCommand(object obj)
         {
-            throw new NotImplementedException();
+            
         }
 
-        private void ExecuteRecoverPassCommand(object obj)
+        private void ExecuteRecoverPassCommand( string username, string email)
         {
             throw new NotImplementedException();
         }
